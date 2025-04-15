@@ -1,0 +1,83 @@
+/* Reset and basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  /* Navbar styles */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background 0.3s ease;
+  }
+  
+  nav.scrolled {
+    background: #333;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+  
+  nav .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    background: #ff4757;
+  }
+  
+  /* Section styles */
+  .section {
+    padding: 100px 20px;
+    min-height: 100vh;
+  }
+  
+  .hero {
+    background: url('https://picsum.photos/1600/900?grayscale') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Responsive nav for mobile */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    nav .logo {
+      font-size: 1.2rem;
+    }
+  }
+  
